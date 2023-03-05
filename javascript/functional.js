@@ -8,13 +8,8 @@ import {handleFavouritesDragover, handleFavouritesMobile} from "./favouritesHand
 let countries = [];
     let filter = [];
     let fav = [];
-    if(localStorage.getItem('favourites') =='null'){
-        fav =[];
-        localStorage.setItem('favourites',JSON.Stringfy(fav));
-        
-    }
-    else
-        fav = JSON.parse(localStorage.getItem('favourites'));
+    localStorage.setItem('favourites',JSON.Stringfy(fav));
+    fav = JSON.parse(localStorage.getItem('favourites'));
     fav = handleFavouritesMobile(fav);
     let favList = document.getElementById('fav-list');
 
