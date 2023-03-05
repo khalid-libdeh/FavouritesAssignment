@@ -11,6 +11,7 @@ export function handleFavouritesMobile(favArray){
     for(let i = 0;i<favIcons.length;i++){
         if(favArray.includes(favIcons[i].id) && !favIcons[i].classList.contains('checked')){
             favIcons[i].classList.add('checked');
+            favIcons[i].preventDefault();
         }
         favIcons[i].addEventListener('click',(e)=>{
             e.preventDefault();
