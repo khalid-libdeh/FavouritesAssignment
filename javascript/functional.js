@@ -7,9 +7,11 @@ import {handleFavouritesDragover, handleFavouritesMobile} from "./favouritesHand
 
 let countries = [];
     let filter = [];
-    let fav;
-    if(JSON.parse(localStorage.getItem('favourites')===null))
+    let fav = [];
+    if(JSON.parse(localStorage.getItem('favourites') === null)){
+        localStorage.setItem('favourites',JSON.Stringfy([]));
         fav =[];
+    }
     else
         fav = JSON.parse(localStorage.getItem('favourites'));
     fav = handleFavouritesMobile(fav);
