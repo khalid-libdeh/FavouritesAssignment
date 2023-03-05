@@ -9,8 +9,9 @@ let countries = [];
     let filter = [];
     let fav = [];
     if(localStorage.getItem('favourites') == null){
-        localStorage.setItem('favourites',JSON.Stringfy([]));
         fav =[];
+        localStorage.setItem('favourites',JSON.Stringfy(fav));
+        
     }
     else
         fav = JSON.parse(localStorage.getItem('favourites'));
